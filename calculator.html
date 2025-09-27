@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h3>Simple Calculator</h3>
+  <input id="x" type="number" placeholder="First number">
+  <input id="y" type="number" placeholder="Second number">
+  <button onclick="calculate()">Calculate</button>
+
+  <p id="result"></p>
+
+  <script>
+    function calculate() {
+      let x = Number(document.getElementById("x").value);
+      let y = Number(document.getElementById("y").value);
+
+      document.getElementById("result").innerHTML =
+        "Add: " + (x + y) + "<br>" +
+        "Subtract: " + (x - y) + "<br>" +
+        "Multiply: " + (x * y) + "<br>" +
+        "Divide: " + (x / y);
+    }
+  </script>
+</body>
+</html>
