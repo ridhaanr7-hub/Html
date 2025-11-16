@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Enter a number and click OK;</p>
+        <input id="id1" type="number" min="100" max="300" required>
+        <button onclick="myfunction()">OK</button>
+        <p>If the  number is less than </p>
+        <p id="result"></p>
+        <script>
+            function myFunction() {
+                var inpObi = document.getElementById("id1");
+                if (inpObi.checkValidity()) {
+                    if (inpObi.value < 100) {
+                        document.getElementById("result").innerHTML = "The number is less than 100";
+                    } else {
+                        document.getElementById("result").innerHTML = "The number is greater than or equal to 300";
+                    }
+            }
+        </script>
+    </body>
+</html>
