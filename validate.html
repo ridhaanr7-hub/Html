@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Validation Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 350px;
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background: #333;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Login Form</h2>
+    <p>Enter your name and age</p>
+
+    <form onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Enter Name" required>
+        <input type="number" id="age" placeholder="Enter Age" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="result"></p>
+</div>
+
+<script>
+function validateForm() {
+    const name = document.getElementById("name").value.trim();
+    const age = parseInt(document.getElementById("age").value);
+    const result = document.getElementById("result");
+
+    if (name === "" || isNaN(age)) {
+        result.textContent = "Please enter valid name and age.";
+        result.style.color = "red";
+        return false;
+    }
+
+    if (age >= 18) {
+        result.textContent = `Welcome, ${name}! You are 18 or older.`;
+        result.style.color = "green";
+    } else {
+        result.textContent = `Hello, ${name}. You are under 18.`;
+        result.style.color = "orange";
+    }
+
+    return false; // Prevent page refresh
+}
+</script>
+
+</body>
+</html>
