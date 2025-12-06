@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        /* Navigation Bar */
+        nav {
+            background-color: #333;
+            padding: 15px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav ul li a:hover {
+            color: #ffa500;
+        }
+
+        /* Banner Image */
+        .banner {
+            width: 100%;
+            height: 400px;
+            background-image: url('https://images.unsplash.com/photo-1555992336-cbfdbcad0fa5');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Content */
+        .content {
+            padding: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner -->
+    <div class="banner"></div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h1>Welcome to Our Restaurant</h1>
+        <p>Experience delicious meals crafted with passion and fresh ingredients. Enjoy a wonderful dining atmosphere with exceptional service.</p>
+    </div>
+
+    <!-- Our Specialties Section -->
+    <section id="specialties" style="padding:40px; background:#f7f7f7; text-align:center;">
+        <h2>Our Specialties</h2>
+        <p>Delicious dishes crafted with authentic flavors and fresh ingredients.</p>
+        <div style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap; margin-top:30px;">
+            <div style="width:250px; background:white; padding:20px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+                <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" style="width:100%; border-radius:10px;" />
+                <h3>Grilled Steak</h3>
+                <p>Juicy and perfectly seasoned.</p>
+            </div>
+            <div style="width:250px; background:white; padding:20px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+                <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141" style="width:100%; border-radius:10px;" />
+                <h3>Pasta Delight</h3>
+                <p>Rich, creamy, and unforgettable.</p>
+            </div>
+            <div style="width:250px; background:white; padding:20px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" style="width:100%; border-radius:10px;" />
+                <h3>Fresh Salad</h3>
+                <p>Light, refreshing, and healthy.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" style="padding:40px; text-align:center;">
+        <h2>Our Portfolio</h2>
+        <p>A glimpse of our ambiance, events, and signature dishes.</p>
+        <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:30px;">
+            <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1" style="width:300px; height:200px; object-fit:cover; border-radius:10px;" />
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0" style="width:300px; height:200px; object-fit:cover; border-radius:10px;" />
+            <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9" style="width:300px; height:200px; object-fit:cover; border-radius:10px;" />
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" style="width:300px; height:200px; object-fit:cover; border-radius:10px;" />
+        </div>
+    </section>
+
+</body>
+</html>
